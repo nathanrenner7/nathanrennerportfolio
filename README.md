@@ -33,9 +33,9 @@ This portfolio highlights my experience as a full-stack web developer. It includ
 To run the portfolio locally, follow these steps:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/yourportfolio.git
-   ```
+```bash
+git clone https://github.com/yourusername/yourportfolio.git
+```
 
 2. Install dependencies:
 ```bash
