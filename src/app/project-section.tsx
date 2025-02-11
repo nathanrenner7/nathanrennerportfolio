@@ -14,6 +14,24 @@ const projects = [
         language: "typescript"
     },
     {
+        title: "Performaxglobalinc.com | Next.js Website",
+        description: "Performaxglobalinc.com is a place to learn about and book perfomax global's private soccer trainings, group sessions, or lab sessions.",
+        link: "http://www.performaxglobalinc.com/",
+        language: "typescript"
+    },
+    {
+        title: "Oneaway.gg | Next.js Website",
+        description: "Oneaway.GG is a leaderboard site to stay up-to-date with all Oneaway, Kenzo, and LamboXD, wager contests for various gambling sites.",
+        link: "https://www.oneaway.gg/",
+        language: "typescript"
+    },
+    {
+        title: "Bonustemple.com | Next.js Website",
+        description: "Bonustemple.GG is a place to stay up-to-date with all bonustemple's bonuses offered to various gambling sites.",
+        link: "https://www.bonustemple.com/",
+        language: "typescript"
+    },
+    {
         title: "Global Events | Minecraft Plugin",
         description: "GlobalEvents is a Minecraft plugin designed to spice up your server with server-wide events, spicing up gameplay by adding dynamic and engaging experiences for players.",
         github: "https://github.com/nathanrenner7/GlobalEvents",
@@ -64,21 +82,23 @@ const ProjectSection = () => {
     const [javaSelected, setJavaSelected] = useState(true);
     const [typescriptSelected, setTypescriptSelected] = useState(true);
     const [otherSelected, setOtherSelected] = useState(true);
+    const [openSourceSelected, setOpenSourceSeleced] = useState(true);
 
     const [filterProjects, setFilteredProjects] = useState(projects);
 
     useEffect(() => {
         setFilteredProjects(projects.filter(project => {
+            if(project.github && !openSourceSelected) return false;
             if (project.language === "java" && javaSelected) return true;
             if (project.language === "typescript" && typescriptSelected) return true;
             if (!project.language && otherSelected) return true;
             return false;
         }))
-    }, [javaSelected, typescriptSelected, otherSelected])
+    }, [javaSelected, typescriptSelected, otherSelected, openSourceSelected])
 
     return (
-        <section id="projects" className="mb-16">
-            <div className="flex items-center gap-x-8 mb-8">
+        <section id="projects" className="mb-16 lg:mx-24">
+            <div className="flex items-center gap-x-8 mb-8 md:justify-start justify-center">
                 <h2 className="text-3xl font-bold text-gray-800">My Projects</h2>
                 <DropdownMenu>
                     <DropdownMenuTrigger className="bg-blue-500 rounded-md px-4 py-1 text-white ">Filter</DropdownMenuTrigger>
@@ -86,6 +106,7 @@ const ProjectSection = () => {
                         <DropdownMenuItem className="flex items-center gap-x-1" onClick={() => setJavaSelected(prevState => !prevState)}>Java {javaSelected && <Check size={12} />}</DropdownMenuItem>
                         <DropdownMenuItem className="flex items-center gap-x-1" onClick={() => setTypescriptSelected(prevState => !prevState)}>Typescript {typescriptSelected && <Check size={12} />}</DropdownMenuItem>
                         <DropdownMenuItem className="flex items-center gap-x-1" onClick={() => setOtherSelected(prevState => !prevState)}>Other {otherSelected && <Check size={12} />}</DropdownMenuItem>
+                        <DropdownMenuItem className="flex items-center gap-x-1" onClick={() => setOpenSourceSeleced(prevState => !prevState)}>Open Source {openSourceSelected && <Check size={12} />}</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu >
             </div>
