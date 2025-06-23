@@ -16,8 +16,8 @@ const Headed = () => {
     console.log(pathName);
 
     return (
-        <nav className="bg-white shadow-md">
-            <div className="lg:mx-24">
+        <nav className="bg-white shadow-md flex flex-row items-center justify-center">
+            <div className="max-w-[1240px] w-full">
                 <div className="container mx-auto px-6 py-3">
                     <div className="flex items-center justify-between">
                         <Link href="/" className={`${lobster.className} text-gray-900 text-2xl font-semibold hover:text-gray-700`}>Nathan Renner</Link>

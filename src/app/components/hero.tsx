@@ -16,7 +16,7 @@ const Hero = () => {
                 <h1 className="text-4xl font-bold text-gray-800 mb-4">Nathan Renner</h1>
                 <p className="text-xl text-gray-600 mb-6">Full-Stack Web Developer</p>
                 <p className="text-gray-700 leading-relaxed">
-                    I&apos;m a passionate web developer with a strong foundation in software engineering, especially Java, where I have over 7 years of experience. Throughout my career, I&apos;ve honed my skills in back-end development, working extensively with MongoDB for the past 3 years. Over the last two years, I&apos;ve shifted my focus towards full-stack development, using Next.js and TypeScript to build modern, scalable web applications. My goal is to continue learning and pushing the boundaries of what&apos;s possible with technology while delivering high-quality solutions.
+                    I am a full-stack developer with over 8 years of software development, beginning with a strong foundation of OOP through Java. Over the past 3 years, my goals have shifted to building modern and scalable web applications using modern technology such as React, Next.js, Typescript, Redis, and MongoDB. I have worked for a variety of clients through freelance projects, with an emphasis on working with content creators in the Web 3 gambling niche. I am passionate about maintaining clean yet highly optimized code that provides an intuitive user experience.
                 </p>
             </div>
         </section>
